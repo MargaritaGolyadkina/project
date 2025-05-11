@@ -26,8 +26,10 @@ const User = sequelize.define('user', {
     surname: { type: DataTypes.STRING(50), allowNull: false },
     email: { type: DataTypes.STRING(100), unique: true, allowNull: false },
     password: { type: DataTypes.STRING, allowNull: false },
-    role_id: { type: DataTypes.INTEGER, allowNull: false }
-}, { underscored: true, tableName: 'users' });
+    role_id: { type: DataTypes.INTEGER, allowNull: false },
+    score: { type: DataTypes.INTEGER, defaultValue: 0 } 
+
+}, { underscored: true, tableName: 'users' }); 
 
 // Таблица задач (Task)
 const Task = sequelize.define('task', {

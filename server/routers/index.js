@@ -11,6 +11,11 @@ const permission = require('./permission_router');
 
 const salaryRoutes = require('./salary_router');
 
+const gameRoutes = require('./game_routes');
+
+router.use('/game', gameRoutes);
+
+
 router.use('/salary', salaryRoutes);
 router.use('/user', user);
 router.use('/prize', prize);
